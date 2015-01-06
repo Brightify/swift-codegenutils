@@ -11,6 +11,10 @@
 		834896061A5C575600F44564 /* StoryboardDumper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834896051A5C575600F44564 /* StoryboardDumper.swift */; };
 		834896071A5C576800F44564 /* CodeGenTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8383CCFD1A5B4A6E006215B5 /* CodeGenTool.swift */; };
 		834896081A5C576B00F44564 /* functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A8B6B51A5C45860017F147 /* functions.swift */; };
+		834896101A5C732F00F44564 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8348960F1A5C732F00F44564 /* main.swift */; };
+		834896151A5C734500F44564 /* ColorListDumper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834896141A5C734500F44564 /* ColorListDumper.swift */; };
+		834896161A5C735C00F44564 /* CodeGenTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8383CCFD1A5B4A6E006215B5 /* CodeGenTool.swift */; };
+		834896171A5C735C00F44564 /* functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A8B6B51A5C45860017F147 /* functions.swift */; };
 		8383CCF41A5B49C7006215B5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8383CCF31A5B49C7006215B5 /* main.swift */; };
 		8383CCFB1A5B49F2006215B5 /* CatalogParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8383CCFA1A5B49F2006215B5 /* CatalogParser.swift */; };
 		8383CCFE1A5B4A6E006215B5 /* CodeGenTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8383CCFD1A5B4A6E006215B5 /* CodeGenTool.swift */; };
@@ -19,6 +23,15 @@
 
 /* Begin PBXCopyFilesBuildPhase section */
 		834895FC1A5C573500F44564 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		8348960B1A5C732F00F44564 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -42,6 +55,9 @@
 		834895FE1A5C573500F44564 /* identifierconstants */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = identifierconstants; sourceTree = BUILT_PRODUCTS_DIR; };
 		834896001A5C573500F44564 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		834896051A5C575600F44564 /* StoryboardDumper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardDumper.swift; sourceTree = "<group>"; };
+		8348960D1A5C732F00F44564 /* colordump */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = colordump; sourceTree = BUILT_PRODUCTS_DIR; };
+		8348960F1A5C732F00F44564 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		834896141A5C734500F44564 /* ColorListDumper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorListDumper.swift; sourceTree = "<group>"; };
 		8383CCF01A5B49C7006215B5 /* swift-assetgen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "swift-assetgen"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8383CCF31A5B49C7006215B5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		8383CCFA1A5B49F2006215B5 /* CatalogParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogParser.swift; sourceTree = "<group>"; };
@@ -51,6 +67,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		834895FB1A5C573500F44564 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8348960A1A5C732F00F44564 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,12 +99,22 @@
 			path = identifierconstants;
 			sourceTree = "<group>";
 		};
+		8348960E1A5C732F00F44564 /* colordump */ = {
+			isa = PBXGroup;
+			children = (
+				8348960F1A5C732F00F44564 /* main.swift */,
+				834896141A5C734500F44564 /* ColorListDumper.swift */,
+			);
+			path = colordump;
+			sourceTree = "<group>";
+		};
 		8383CCE71A5B49C7006215B5 = {
 			isa = PBXGroup;
 			children = (
 				8383CCF21A5B49C7006215B5 /* assetgen */,
 				8383CCFC1A5B4A4C006215B5 /* Shared */,
 				834895FF1A5C573500F44564 /* identifierconstants */,
+				8348960E1A5C732F00F44564 /* colordump */,
 				8383CCF11A5B49C7006215B5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,6 +124,7 @@
 			children = (
 				8383CCF01A5B49C7006215B5 /* swift-assetgen */,
 				834895FE1A5C573500F44564 /* identifierconstants */,
+				8348960D1A5C732F00F44564 /* colordump */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,6 +167,23 @@
 			productReference = 834895FE1A5C573500F44564 /* identifierconstants */;
 			productType = "com.apple.product-type.tool";
 		};
+		8348960C1A5C732F00F44564 /* colordump */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 834896111A5C732F00F44564 /* Build configuration list for PBXNativeTarget "colordump" */;
+			buildPhases = (
+				834896091A5C732F00F44564 /* Sources */,
+				8348960A1A5C732F00F44564 /* Frameworks */,
+				8348960B1A5C732F00F44564 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = colordump;
+			productName = colordump;
+			productReference = 8348960D1A5C732F00F44564 /* colordump */;
+			productType = "com.apple.product-type.tool";
+		};
 		8383CCEF1A5B49C7006215B5 /* assetgen */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8383CCF71A5B49C7006215B5 /* Build configuration list for PBXNativeTarget "assetgen" */;
@@ -162,6 +213,9 @@
 					834895FD1A5C573500F44564 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
+					8348960C1A5C732F00F44564 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
 					8383CCEF1A5B49C7006215B5 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
@@ -181,6 +235,7 @@
 			targets = (
 				8383CCEF1A5B49C7006215B5 /* assetgen */,
 				834895FD1A5C573500F44564 /* identifierconstants */,
+				8348960C1A5C732F00F44564 /* colordump */,
 			);
 		};
 /* End PBXProject section */
@@ -194,6 +249,17 @@
 				834896011A5C573500F44564 /* main.swift in Sources */,
 				834896061A5C575600F44564 /* StoryboardDumper.swift in Sources */,
 				834896081A5C576B00F44564 /* functions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		834896091A5C732F00F44564 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				834896161A5C735C00F44564 /* CodeGenTool.swift in Sources */,
+				834896151A5C734500F44564 /* ColorListDumper.swift in Sources */,
+				834896101A5C732F00F44564 /* main.swift in Sources */,
+				834896171A5C735C00F44564 /* functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +289,24 @@
 			name = Debug;
 		};
 		834896041A5C573500F44564 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		834896121A5C732F00F44564 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		834896131A5C732F00F44564 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -326,6 +410,14 @@
 			buildConfigurations = (
 				834896031A5C573500F44564 /* Debug */,
 				834896041A5C573500F44564 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		834896111A5C732F00F44564 /* Build configuration list for PBXNativeTarget "colordump" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				834896121A5C732F00F44564 /* Debug */,
+				834896131A5C732F00F44564 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4A15790F-F642-4AAA-9FFC-8CBCB777ACFA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>codegenutils</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>46D0DCBB48B4F35B3F936A3738E22C6842984C3A</key>
+		<string>https://github.com/brightify/swift-codegenutils</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>codegenutils.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>46D0DCBB48B4F35B3F936A3738E22C6842984C3A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/brightify/swift-codegenutils</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>46D0DCBB48B4F35B3F936A3738E22C6842984C3A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>46D0DCBB48B4F35B3F936A3738E22C6842984C3A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>swift-codegenutils</string>
+		</dict>
+	</array>
+</dict>
+</plist>

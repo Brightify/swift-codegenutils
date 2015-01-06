@@ -15,7 +15,7 @@ class CodeGenTool {
     var skipClassDeclaration: Bool
     var toolName: String
     
-    var className: String?
+    var className: String = ""
     var contents: [String] = []
     
     required init(inputURL: NSURL, classPrefix: String, toolName: String) {
@@ -30,9 +30,8 @@ class CodeGenTool {
     }
     
     func writeOutputFiles() {
-        assert(self.className != nil, "Class name isn't set")
+        assert(self.className != "", "Class name isn't set")
         
-        let className = self.className!
         let fileManager = NSFileManager()
         let currentDirectory = fileManager.currentDirectoryPath
         let classURL: NSURL! = NSURL(fileURLWithPath: currentDirectory.stringByAppendingPathComponent(className).stringByAppendingPathExtension("swift")!)
