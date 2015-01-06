@@ -13,3 +13,7 @@ func synchronized(lock: AnyObject, closure: () -> ()) {
     closure()
     objc_sync_exit(lock)
 }
+
+func wholeStringRange(string: String) -> Range<String.Index> {
+    return Range<String.Index>(start: string.startIndex, end: string.endIndex)
+}

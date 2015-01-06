@@ -67,14 +67,11 @@ class CodeGenTool {
             key = key.stringByReplacingCharactersInRange(range, withString: key.substringWithRange(range).lowercaseString)
         }
         
-        func getWholeKeyRange() -> Range<String.Index> {
-            return Range<String.Index>(start: key.startIndex, end: key.endIndex)
-        }
         
-        key = key.stringByReplacingOccurrencesOfString("" , withString: "", options: NSStringCompareOptions.allZeros, range: getWholeKeyRange())
-        key = key.stringByReplacingOccurrencesOfString("~" , withString: "", options: NSStringCompareOptions.allZeros, range: getWholeKeyRange())
-        key = key.stringByReplacingOccurrencesOfString("@" , withString: "", options: NSStringCompareOptions.allZeros, range: getWholeKeyRange())
-        key = key.stringByReplacingOccurrencesOfString("-" , withString: "_", options: NSStringCompareOptions.allZeros, range: getWholeKeyRange())
+        key = key.stringByReplacingOccurrencesOfString("" , withString: "", options: NSStringCompareOptions.allZeros, range: wholeStringRange(key))
+        key = key.stringByReplacingOccurrencesOfString("~" , withString: "", options: NSStringCompareOptions.allZeros, range: wholeStringRange(key))
+        key = key.stringByReplacingOccurrencesOfString("@" , withString: "", options: NSStringCompareOptions.allZeros, range: wholeStringRange(key))
+        key = key.stringByReplacingOccurrencesOfString("-" , withString: "_", options: NSStringCompareOptions.allZeros, range: wholeStringRange(key))
         return key        
     }
     
@@ -118,10 +115,12 @@ class CodeGenTool {
             printHelp()
             return
         }
-        for i in (lastParsedIndex + 1)...(argumentCount - 1) {
-            let inputPath = Process.arguments[i].stringByExpandingTildeInPath
-            let inputURL = NSURL.fileURLWithPath(inputPath)
-            inputURLs.append(inputURL)
+        if(lastParsedIndex < argumentCount - 1) {
+            for i in (lastParsedIndex + 1)...(argumentCount - 1) {
+                let inputPath = Process.arguments[i].stringByExpandingTildeInPath
+                let inputURL = NSURL.fileURLWithPath(inputPath)
+                inputURLs.append(inputURL)
+            }
         }
         
         if let searchURL = searchURLOrNil {
