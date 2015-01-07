@@ -26,8 +26,8 @@ class ColorListDumper : CodeGenTool {
             let key = key as String
             let color: NSColor! = colorList.colorWithKey(key)
         
-            if(color.colorSpaceName != NSDeviceRGBColorSpace) {
-                println("Color \(key) isn't device RGB. Skipping.")
+            if(color.colorSpaceName != NSCalibratedRGBColorSpace) {
+                println("Color \(key) isn't generic calibrated RGB. Skipping.")
                 continue
             }
             
