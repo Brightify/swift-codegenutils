@@ -31,7 +31,7 @@ class ColorListDumper : CodeGenTool {
                 continue
             }
             
-            let returnColor = String(format: "    return UIColor(red: %.3ff, green: %.3ff, blue: %.3ff, alpha: %.3ff)\n", Double(color.redComponent), Double(color.greenComponent), Double(color.blueComponent), Double(color.alphaComponent))
+            let returnColor = String(format: "    return UIColor(red: %.3f, green: %.3f, blue: %.3f, alpha: %.3f)\n", Double(color.redComponent), Double(color.greenComponent), Double(color.blueComponent), Double(color.alphaComponent))
             
             var method = "class func \(methodNameForKey(key))Color() -> UIColor {\n"
             method += "\(returnColor)"

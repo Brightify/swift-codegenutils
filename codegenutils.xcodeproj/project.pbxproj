@@ -284,14 +284,14 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "swift-$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		834896041A5C573500F44564 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "swift-$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -302,14 +302,14 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "swift-$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		834896131A5C732F00F44564 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "swift-$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -391,14 +391,14 @@
 		8383CCF81A5B49C7006215B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "swift-assetgen";
+				PRODUCT_NAME = "swift-$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		8383CCF91A5B49C7006215B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "swift-assetgen";
+				PRODUCT_NAME = "swift-$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -412,6 +412,7 @@
 				834896041A5C573500F44564 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		834896111A5C732F00F44564 /* Build configuration list for PBXNativeTarget "colordump" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +421,7 @@
 				834896131A5C732F00F44564 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8383CCEB1A5B49C7006215B5 /* Build configuration list for PBXProject "codegenutils" */ = {
 			isa = XCConfigurationList;

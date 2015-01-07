@@ -12,17 +12,18 @@ class CodeGenTool {
     
     var inputURL: NSURL
     var classPrefix: String
-    var skipClassDeclaration: Bool
+    var skipClassDeclaration: Bool = false
     var toolName: String
+    var implicitUnwrapping: Bool
     
     var className: String = ""
     var contents: [String] = []
     
-    required init(inputURL: NSURL, classPrefix: String, toolName: String) {
+    required init(inputURL: NSURL, classPrefix: String, toolName: String, implicitUnwrapping: Bool) {
         self.inputURL = inputURL
         self.classPrefix = classPrefix
         self.toolName = toolName
-        self.skipClassDeclaration = false
+        self.implicitUnwrapping = implicitUnwrapping
     }
     
     func startWithCompletionHandler(completionClosure: () -> ()) {
@@ -78,11 +79,12 @@ class CodeGenTool {
         var searchURLOrNil: NSURL?
         var classPrefix = ""
         var inputURLs: [NSURL?] = []
+        var implicitUnwrapping = false
         let programName = Process.arguments[0].lastPathComponent
         let argumentCount = Process.arguments.count
         var lastParsedIndex = 0
         if(argumentCount > 1) {
-            for var i = 1; i < argumentCount - 1; i++ {
+            for var i = 1; i < argumentCount; i++ {
                 let argument = Process.arguments[i]
                 
                 if(argument.hasPrefix("-")) {
@@ -103,6 +105,9 @@ class CodeGenTool {
                     case "-p":
                         let nextIndex = ++i
                         classPrefix = Process.arguments[nextIndex]
+                        lastParsedIndex = i
+                    case "-u":
+                        implicitUnwrapping = true
                         lastParsedIndex = i
                     default:
                         break
@@ -140,7 +145,7 @@ class CodeGenTool {
             if let url = urlOrNil {
                 dispatch_group_enter(group)
                 
-                let target = self.init(inputURL: url, classPrefix: classPrefix, toolName: programName)
+                let target = self.init(inputURL: url, classPrefix: classPrefix, toolName: programName, implicitUnwrapping: implicitUnwrapping)
                 target.startWithCompletionHandler({
                     dispatch_group_leave(group)
                 })
@@ -165,6 +170,7 @@ class CodeGenTool {
         println("    -f <path>   Search for *.\(inputFileExtension()) folders starting from <path>.")
         println("    -p <prefix> Use <prefix> as the class prefix in the generated code.")
         println("    -h          Print this help and exit.")
+        println("    -u          Implicly unwrapped return types (i.e. UIImage! instead of the default UIImage?).")
         println("    <paths>     Input files; this and/or -f are required.")
     }
     

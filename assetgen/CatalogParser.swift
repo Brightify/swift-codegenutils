@@ -11,8 +11,12 @@ import Foundation
 class CatalogParser : CodeGenTool {
     
     var imageSetURLs: [NSURL?] = []
-
+    var returnType: String = "UIImage?"
+    
     override func startWithCompletionHandler(completionClosure: () -> ()) {
+        if(implicitUnwrapping) {
+            returnType = "UIImage!"
+        }
         let dispatchGroup = dispatch_group_create()
         let dispatchQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
         dispatch_async(dispatchQueue) {
@@ -92,7 +96,7 @@ class CatalogParser : CodeGenTool {
             }
         })
         
-        var implementation = "class func \(methodName)Image() -> UIImage {\n"
+        var implementation = "class func \(methodName)Image() -> \(returnType) {\n"
         implementation += "    return UIImage(named: \"\(imageSetName!)\")\n"
         implementation += "}\n\n"
         
